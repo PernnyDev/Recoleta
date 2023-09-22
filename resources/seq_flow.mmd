@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant M as Main
+    participant U as User
+    participant I as Item
+    participant R as Review
+    M->>U: register(username, email, password)
+    M->>U: login(username, password)
+    U->>I: list_item(title, description, price)
+    M->>I: search_item(title)
+    M->>U: initiate_chat(user, item)
+    M->>R: write_review(reviewer, reviewed, content, rating)
